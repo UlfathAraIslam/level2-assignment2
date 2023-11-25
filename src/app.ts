@@ -12,9 +12,10 @@ app.use(cors());
 app.use('/api/users', UserRoutes);
 
 const getAController = (req: Request, res: Response) => {
-    const a = 10;
-  
-    res.send({a});
+  res.status(200).json({
+    success: true,
+    message: 'Welcome to the api of nodejs express application'
+  })
   }
 
 app.get('/',getAController);
